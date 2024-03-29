@@ -14,7 +14,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: build
-      run: javac -d ./out/ -encoding utf-8 src/*.java
+      run: javac -d ./out/ -encoding utf-8 ./src/*.java
     - name: Package JAR
       run: jar cfe ./eComp.jar Main ./out/*.class
     - name: Run JAR
