@@ -15,3 +15,7 @@ jobs:
         distribution: 'temurin'
     - name: build
       run: javac -encoding utf-8 src/*.java
+    - name: Package JAR
+      run: jar cfe ./eComp.jar Greeting *.class
+    - name: Run JAR
+      run: java -jar ./eComp.jar 
